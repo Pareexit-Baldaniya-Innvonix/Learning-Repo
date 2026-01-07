@@ -132,6 +132,15 @@ def get_greetings():
 message = get_greetings
 print(message)
 
+# lambda function:
+-> used to define anonymous function in Python
+-> can take any no. of arguments, but can only have one expression
+
+Ex.
+s1 = "Hello"
+s2 = lambda a: a.upper()
+print(s2(s1))
+
 +--------------------------------------------------------------------------------------------------------------------+
 
 # Data Structure:
@@ -153,6 +162,20 @@ list1 = [["o","p"],["q"]]  --> multi-dimentional list
 6. list.copy()  --> returns a copy of the list
 7. list.extend()  --> add more list at the end of the current list
 8. list.remove()  --> removes the element with the specified value
+
+# List Comprehension:
+-> offers a shorter syntax to create new list based on existing list
+
+Ex.
+
+fruits = ['apple', 'banana', 'mango', 'kiwi', 'guava', 'pears']
+newList = []
+
+for x in fruits:
+    if 'a' in x:
+    newList.append(x)
+
+print(newList)
 
 
 2. Tuple (): ordered, immutable
@@ -289,7 +312,37 @@ print(m.sqrt(25))
 +--------------------------------------------------------------------------------------------------------------------+
 
 # List operations:
+-> functional programming tools
 
+1. map():
+-> used when apply a specific function to every item
+
+# syntax
+map(function, iterable)
+
+Ex.
+num = [1, 2, 3, 4]
+doubled = list(map(lambda x: x * 2, numbers))
+
+2. filter():
+-> used to extract item with a specific condition from an iterator
+
+# syntax
+fliter(function, iterable)
+
+Ex.
+num = [1, 2, 3, 4, 5, 6]
+even = list(filter(lambda x: x % 2 == 0, numbers))
+
+3. reduce():
+-> reduce a list to a single value by applying a rolling computation
+-> need to import from functools module
+
+# syntax
+from functools import reduce
+
+numbers = [1, 2, 3, 4]
+product = reduce(lambda x, y : x * y, numbers) --> o/p = 24
 
 
 +--------------------------------------------------------------------------------------------------------------------+
