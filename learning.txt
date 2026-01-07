@@ -143,6 +143,17 @@ Ex.
 list = ["a","b","c"]  --> multiple values
 list1 = [["o","p"],["q"]]  --> multi-dimentional list
 
+# Methods:
+
+1. list.append()  --> add element at the end of the list
+2. list.clear()  --> remove all the elements
+3. list.sort()  --> sorts the list
+4. list.insert()  --> adds an element to the specific position
+5. list.cout()  --> count the elements present in the list
+6. list.copy()  --> returns a copy of the list
+7. list.extend()  --> add more list at the end of the current list
+8. list.remove()  --> removes the element with the specified value
+
 
 2. Tuple (): ordered, immutable
 -> need a trailing 'comma' to make it tuple
@@ -154,6 +165,11 @@ Tuple = ('a','b')  --> tuple using string
 list1 = [1,2,3]  
 tuple = tuple(list1)  --> tuple using list
 
+# Methods:
+
+1. tuple.count()  --> returns a number of times a specified value occurs in tuple
+2. tuple.index()  --> search and give the position no. of a perticular tuple
+
 
 3. Dict {}: unordered, immutable
 -> it holds a key:value pair
@@ -161,12 +177,28 @@ tuple = tuple(list1)  --> tuple using list
 Ex. 
 dict = {'name': 'xyz', 'b': 2}
 
+# Methods:
+
+1. dict.clear()  --> remove all the elements from the dictionary
+2. dict.copy()  --> returns a copy of the dictionary 
+3. dict.pop()  --> removes the  element with the specific key
+4. dict.update()  --> update the dictionary with the specified key-value pair
+5. dict.values()  --> returns a list of all the value in the dictionary
+
 
 4. Set (): unordered, mutable, not allowed duplicates
 -> used for eliminate duplicate entries
 
 Ex.
 set = set([1,2,2,3,4,4,5])  --> o/p - 1,2,3,4,5
+
+# Methods:
+
+1. set.add()  --> adds an element
+2. set.union()  --> returns a set containing union of sets
+3. set.update()  --> update the set with the union of this set and other
+4. set.clear()  --> removes all the elements from the set
+5. set.discard()  -->remove the specified item
 
 +--------------------------------------------------------------------------------------------------------------------+
 
@@ -258,9 +290,34 @@ print(m.sqrt(25))
 
 # List operations:
 
+
+
 +--------------------------------------------------------------------------------------------------------------------+
 
-# Virtual Environment
+# Virtual Environment(venv):
+
+-> it's an isolated working directory
+
+# use:
+-> conflict prevention  --> saperate dependency for defferent project
+-> no admin rights  --> install any packages without sudo and admin permission
+-> Reproducibility  --> easily share which library is needed for project
+
+# lifecycle of the venv:
+
+1. Create the environment:
+$ python -m venv .vene
+
+2. Activate the environment:
+$ source .venv/bin/activate
+
+3. Install packages:
+$ pip install ...
+
+4. Deactivate:
+$ Deactivate
+
+--> best practice is to never commit .venv folder to the git
 
 +--------------------------------------------------------------------------------------------------------------------+
 
