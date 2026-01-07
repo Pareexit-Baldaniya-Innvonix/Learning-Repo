@@ -127,7 +127,7 @@ def functionName():
 
 Ex.
 def get_greetings():
-    return "Hello from a functon"
+    return "Hello from a function"
 
 message = get_greetings
 print(message)
@@ -346,7 +346,26 @@ print(next(generator))  --> o/p = 2
 +--------------------------------------------------------------------------------------------------------------------+
 
 # Decorators:
+-> decorators are function that takes function and return it with some additional functionalities
+-> it is a wrapper funtion that modifies the behaviour
+-> use '@' symbol for assigning a decorator to the function 
 
+Ex.
+def greetings(func):
+    def wrapper():  --> nested function
+        print("Hello!")
+        func()
+        print("How are you?")
+    return wrapper
+
+@my_decorator
+def world():
+    print(", World")
+
+print(world)
+--> o/p = Hello!, World  --> before function runs, decorator works
+          How are you?  --> after function run, decorator not works
+          
 +--------------------------------------------------------------------------------------------------------------------+
 
 # List operations:
@@ -432,7 +451,7 @@ $ Deactivate
 # How to start pdb:
 
 1. Insert a breakpoint in code
--> use the built-in funcion point (Python 3.7+)
+-> use the built-in function point (Python 3.7+)
 -> insert import pdb; pdb.set_trace() at the desired line
 -> at the execution time it stops here and open pdb prompt
 
