@@ -282,6 +282,7 @@ print("File written successfully")
 -> file containing Python code
 
 -> three types:
+
 1. built-in
 -> already built in the python
 
@@ -390,7 +391,7 @@ class square(shape):
 1. Iterators:
 -> it remembers a place while moving through a collection
 -> list, string, dict, set, tuple all are iterables
--> whenever we runs a for loop it secretly convert tha tlist into iterator
+-> whenever we runs a for loop it secretly convert that list into iterator
 -> it can grab items one by one
 
 # Methods:
