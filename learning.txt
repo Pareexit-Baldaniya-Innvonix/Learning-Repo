@@ -51,7 +51,7 @@ git log  --> show the history of the repo
 
 # git clone <repository_url>  --> use for cloning the repository
 
-# git checkout -- <file_name>  --> use for going current to previous working tree
+# git checkout -- <filename>  --> use for going current to previous working tree
 
 # git fetch origin  --> download the latest commit from origin
 
@@ -307,6 +307,81 @@ print(m.sqrt(25))
 +--------------------------------------------------------------------------------------------------------------------+
 
 # OOPs:
+
+1. class:
+-> it is a blueprint of the object
+
+Ex.
+class Car():
+    pass
+
+2. object:
+-> it is an instance of class
+
+Ex.
+my_car = Car()
+
+# Four main pillors fof the OOPs:
+
+3. Inheritance:
+-> one class inherits properties and methods from another class
+
+Ex.
+class animal():
+    def speak(self):
+        print("Animal speaks")
+
+class dog(animal):
+    def speak(self):
+        print("Dog speaks")
+
+4. Encapsulation:
+-> it hides the complex data in the object
+-> gives security to the data
+
+Ex.
+class account():
+    def __init__(self):
+        self.__balance = 0  --> private varible
+    
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def get_balance(self):
+        return self.__balance
+
+5. Polymorphism:
+-> different objects to be treated as a same
+-> method has same name but different behaviour
+
+Ex.
+class bird():
+    def fly(self):
+        print("Bird flies")
+    
+class penguin(bird):
+    def fly(self):
+        print("penguin can't fly")
+
+Ex.
+class ():
+    def ():
+        print("")
+
+6. Abstraction:
+-> hides the implementation process, only showing essential features
+
+Ex.
+from abc import ABC, abstractmethod
+
+class shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class square(shape):
+    def area(self):
+        return 4 * 4
 
 +--------------------------------------------------------------------------------------------------------------------+
 
