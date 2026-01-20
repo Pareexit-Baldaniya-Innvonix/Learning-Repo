@@ -68,7 +68,7 @@ Task 3:
     - task to assign values to the data members of the class when an object of the class is created
     - `__init__` method is called the constructor
 
-super():
+`super()`:
     - allows us to access the temporary object of the class
     - not use the base class name explictly
     - helps in working with multiple inheritances
