@@ -14,7 +14,7 @@
 
 ## How to connect MySQL(RDBMS) in terminal:
 
-- Using `mysql -u root -p` command, access the psql (shell) which is used for executing queries.
+- Using `mysql -u root -p` command, access the MySQL shell which is used for executing queries.
 
 ### Common meta-commands for MySQL:
 
@@ -27,7 +27,7 @@
 
 ## How to connect SQLite(RDBMS) in terminal:
 
-- Using `sqlite3` command, access the psql (shell) which is used for executing queries.
+- Using `sqlite3` command, access the SQLIte shell which is used for executing queries.
 
 ### Common meta-commands for SQLite:
 
@@ -40,7 +40,7 @@
 
 ## How to connect MongoDB(NoSQL) in terminal:
 
-- Using `mongosh` command, access the psql (shell) which is used for executing queries.
+- Using `mongosh` command, access the connection which is used for connting with MongoDB Compass.
 
 ### Common meta-commands for MongoDB:
 
