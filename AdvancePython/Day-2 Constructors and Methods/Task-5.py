@@ -1,20 +1,20 @@
 # Task 5:
-class AgeOfCar:
+class Car:
     age = 20
 
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+    def __init__(self, make: str, model: str, year: int) -> None:
+        self.make: str = make
+        self.model: str = model
+        self.year: int = year
 
     @property
-    def age(self):
-        current_year = 2026
+    def age(self) -> int:
+        current_year: int = 2026
         return current_year - self.year
 
 
-details = AgeOfCar("BMW", "M4", 2024)
-print(f"Make: {details.make}")
-print(f"Model: {details.model}")
-print(f"Year: {details.year}")
-print(f"Age: {details.age}")
+my_car = Car("BMW", "M4", 2024)
+print(f"Make: {my_car.make}")
+print(f"Model: {my_car.model}")
+print(f"Year: {my_car.year}")
+print(f"Age: {my_car.age} years")

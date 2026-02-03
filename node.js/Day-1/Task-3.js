@@ -1,7 +1,7 @@
 // Task 3: Instantiate object from the class
 class Car {
     constructor(make, model, year) {
-        // 'this' keyward refers to the specific object instance being created or used
+        // 'this' keyword refers to the specific object instance being created or used
         this.make = make;
         this.model = model;
         this.year = year;

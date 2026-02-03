@@ -1,11 +1,12 @@
 # Task 3:
 # 1. Instance method:
-class InsCar:
-    def __init__(self):
-        self.color = "Blue"
+class Car:
+    def __init__(self, color: str) -> None:
+        self.color: str = color
 
-    def show_color(self):  # this is instance method
+    def show_color(self) -> None:  # this is instance method
         print(f"The car is {self.color}")
 
-car = InsCar()
-car.show_color()
+
+my_car = Car("Blue")
+my_car.show_color()

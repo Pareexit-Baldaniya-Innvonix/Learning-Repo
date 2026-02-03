@@ -1,12 +1,13 @@
 # Task 3:
 # 4. Accessors:
-class AcsCar:
-    def __init__(self, brand):
-        self._brand = brand
+class Car:
+    def __init__(self, brand: str) -> None:
+        self._brand: str = brand  # '_(underscore prefix)' means 'internal use'
 
     @property
-    def brand_name(self):
+    def brand_name(self) -> str:
         return self._brand.upper()
-    
-car3 = AcsCar("BMW")
-print(car3.brand_name)
+
+
+car_brand = Car("BMW")
+print(f"Car brand is: {car_brand.brand_name}")

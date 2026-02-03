@@ -2,18 +2,20 @@
 from enum import Enum
 
 
-class size:
-    SMALL = "small"
+# using enumiration for toy size
+class Size(Enum):  # IntEnum for integer values
+    SMALL = "small"  # also use interger values for Enum
     MEDIUM = "medium"
     LARGE = "large"
 
 
 class Toy:
-    def __init__(self):
-        self.name = "Bear"
-        self.size = size.SMALL
+    def __init__(self, name: str, size: Size) -> None:
+        self.name: str = name
+        self.size: Size = size
 
 
-toy = Toy()
-print(toy.name)
-print(toy.size)
+my_toy = Toy(name="Bear", size=Size.MEDIUM)
+my_lion = Toy(name="Lion", size=Size.LARGE)
+print(f"Name: {my_toy.name} | Size: {my_toy.size.value}")
+print(f"Name: {my_lion.name} | Size: {my_lion.size.value}")
