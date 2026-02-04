@@ -1,13 +1,13 @@
 # Task 3: Decorators
-def changecase(func):
-    def myinner():
+def changecase(func: str) -> str:
+    def myinner() -> str:
         return func().upper()
 
     return myinner
 
 
 @changecase
-def myfunction():
+def myfunction() -> str:
     return "Hello World!"
 
 

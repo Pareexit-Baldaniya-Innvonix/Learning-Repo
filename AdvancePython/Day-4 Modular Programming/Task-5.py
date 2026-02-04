@@ -1,9 +1,12 @@
 # Task 5:
 import time
+import functools
 
 
-def timer(func):
-    def wrapper(*args, **kwargs):
+def timer(func: callable) -> callable:
+
+    @functools.wraps(func)
+    def wrapper(*args: any, **kwargs: any) -> any:
         start_time = time.perf_counter()
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
@@ -14,7 +17,7 @@ def timer(func):
 
 
 @timer
-def waste_time():
+def waste_time() -> None:
     time.sleep(1)
     print("Function finished!")
 
