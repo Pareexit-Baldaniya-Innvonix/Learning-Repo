@@ -213,11 +213,11 @@ __marimo__/
 node_modules/
 
 # Database and Data storage
-.db
-.pkl
+*.db
+*.pkl
 
 # Generated Assets (The images causing your current error)
 downloaded_images/
 
 # Log files
-.log
+*.log
