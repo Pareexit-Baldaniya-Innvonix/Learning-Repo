@@ -1,6 +1,3 @@
-# Day 7: Decorators in Python
-
-
 # Task 1: Decorators
 def changeCase(func):
     def myInner():

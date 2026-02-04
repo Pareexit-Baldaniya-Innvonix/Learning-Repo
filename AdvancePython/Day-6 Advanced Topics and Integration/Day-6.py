@@ -1,6 +1,3 @@
-# Day 6: Advanced Topics and Integration
-
-
 # Exceptions:
 class ValueToHighError(Exception):
     pass

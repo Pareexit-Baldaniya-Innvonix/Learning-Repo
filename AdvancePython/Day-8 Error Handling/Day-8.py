@@ -1,5 +1,3 @@
-# Day 8: Error Handling
-
 # Task 1: Pickling
 import pickle
 

@@ -1,19 +1,21 @@
 # Task 3:
 # 2. Constructors:
-def __init__(self):
+def __init__(self) -> None:
     # body of the constructor
     pass
 
 
-class Class:
-    def __init__(self, x):
-        print(f"Parent class: {x}")
+class Parent:
+    def __init__(self, item: list[int]) -> str:
+        self.item: list[int] = item
+        print(f"Parent class: {self.item}")
 
 
-class SubClass(Class):
-    def __init__(self, x):
-        super().__init__(x)
+class SubClass(Parent):
+    def __init__(self, item: list[int]) -> None:
+        super().__init__(item)
+        print(f"Output of SubClass")
 
 
-x = [1, 2, 3, 4, 5]
-a = SubClass(x)
+data = [1, 2, 3, 4, 5]
+instance = SubClass(data)

@@ -1,20 +1,20 @@
 # Task 4:
 class Employee:
-    def __init__(self):
-        self.name = "John"
-        self.addr = self.Address()
+    class Address:
+        def __init__(self, country: str) -> None:
+            self.country: str = country
 
-    def show(self):
-        print("Name:", self.name)
+        def display(self) -> None:
+            print(f"Address: {self.country}")
+
+    def __init__(self, name: str, country: str = "India") -> None:
+        self.name = name
+        self.addr = self.Address(country)
+
+    def show(self) -> None:
+        print(f"Name: {self.name}")
         self.addr.display()
 
-    class Address:
-        def __init__(self):
-            self.add = "India"
 
-        def display(self):
-            print("Address:", self.add)
-
-
-e1 = Employee()
+e1 = Employee("Virat")
 e1.show()

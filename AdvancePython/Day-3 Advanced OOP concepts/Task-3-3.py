@@ -1,16 +1,17 @@
 # Task 3:
 # 3. Method overloading:
-def Add(datatype, *args):
+def add_values(datatype: str, *args: any) -> None:
     if datatype == "int":
         answer = 0
-
-    if datatype == "str":
+    elif datatype == "str":
         answer = ""
+    else:
+        print(f"Different datatype!")
 
     for x in args:
         answer += x
     print(answer)
 
 
-Add("int", 5, 6)
-Add("str", "Hello ", "World")
+add_values("int", 5, 6)
+add_values("str", "Hello ", "World")

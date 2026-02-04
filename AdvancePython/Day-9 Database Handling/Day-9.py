@@ -1,5 +1,3 @@
-# Day 9: Database Handling
-
 # Task 2:
 import mysql.connector
 import os
