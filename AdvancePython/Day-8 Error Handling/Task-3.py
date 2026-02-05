@@ -1,26 +1,12 @@
-# Task 1: Pickling
-import pickle
-
-data = {"name": "world", "age": 25}  # python object
-
-pickle.dump(
-    data, open("data.pkl", "wb")
-)  # serialize the object. 'wb' - write in binary mode
-load = pickle.load(
-    open("data.pkl", "rb")
-)  # read the file and deserialize into python object
-print(load)
-
-
 # Task 3:
+import os
+
+
 class FileEmptyError(Exception):
     pass
 
 
-import os
-
-
-def read_and_print_file(filename):
+def read_and_print_file(filename: str) -> None:
     try:
         if os.path.exists(filename) and os.path.getsize(filename) == 0:
             raise FileEmptyError(f"The file '{filename}' contains no data.")
@@ -40,8 +26,8 @@ def read_and_print_file(filename):
     except Exception as e:
         print(f"An unexpected error occured: {e}")
 
+if __name__ == "__main__":
+    read_and_print_file("ghost.txt") # missing file
 
-read_and_print_file("ghost.txt")
-
-open("empty.txt", "w").close()
-read_and_print_file("empty.txt")
+    open("empty.txt", "w").close()
+    read_and_print_file("empty.txt") # empty file
