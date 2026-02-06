@@ -1,18 +1,16 @@
 import pymongo
 
 try:
-    client = pymongo.MongoClient("mongodb://localhost:27017/", serverSelectionTimeoutMS = 2000)
-    client.admin.command('ping')
+    client = pymongo.MongoClient(
+        "mongodb://localhost:27017/", serverSelectionTimeoutMS=2000
+    )
+    client.admin.command("ping")
     print("Actual connection confirmed!")
 
     db = client["my_database"]
     collection = db["users"]
 
-    user_data = {
-        "name": "John",
-        "email": "john123@gmail.com",
-        "age": 25
-    }
+    user_data = {"name": "John", "email": "john123@gmail.com", "age": 25}
 
     result = collection.insert_one(user_data)
     print(f"Inserted document ID: {result.inserted_id}")
