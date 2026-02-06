@@ -40,7 +40,7 @@
 
 ## How to connect MongoDB(NoSQL) in terminal:
 
-- Using `mongosh` command, access the connection which is used for connting with MongoDB Compass.
+- Using `sudo systemctl start mongod` and `mongosh` command, access the connection which is used for connting with MongoDB Compass.
 
 ### Common meta-commands for MongoDB:
 
