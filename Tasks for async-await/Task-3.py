@@ -1,6 +1,5 @@
 # Task-3: Use async function to download images from array of urls at the same time
 import asyncio
-import requests
 import aiohttp
 from pathlib import Path
 
