@@ -2,11 +2,20 @@
 import asyncio
 import aiohttp
 from pathlib import Path
+from typing import List, Optional
+
+URLs: List[str] = [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDCoZOlY05iDyrVnJGfFwE6aSL_YObRf8YTQ&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3au9dyNY7UPpOSeWc6YDwMQ1hN5cErKaOgA&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0vKSFN7EDNmm8-6SUofhSLaSk8nBBH9TiMw&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWHUm6Z0ORnosy36kbPNT-rkZnoFVnFLV6Uw&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiAwSp3ZiNlI5W1xkBLcaWVfQZ6ErLXL5BcQ&s",
+]
 
 
 async def download_image(
     session: aiohttp.ClientSession, url: str, filename: str
-) -> None:
+) -> Optional[Path]:
     try:
         async with session.get(url) as response:
             response.raise_for_status()
@@ -26,14 +35,6 @@ async def download_image(
 
 
 async def url_download() -> None:
-    URLs = [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDCoZOlY05iDyrVnJGfFwE6aSL_YObRf8YTQ&s",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3au9dyNY7UPpOSeWc6YDwMQ1hN5cErKaOgA&s",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0vKSFN7EDNmm8-6SUofhSLaSk8nBBH9TiMw&s",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWHUm6Z0ORnosy36kbPNT-rkZnoFVnFLV6Uw&s",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiAwSp3ZiNlI5W1xkBLcaWVfQZ6ErLXL5BcQ&s",
-    ]
-
     async with aiohttp.ClientSession() as session:
         tasks = [
             download_image(session, url, f"image-{i+1}.jpg")
